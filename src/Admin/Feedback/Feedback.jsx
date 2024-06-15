@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { FaPenToSquare } from "react-icons/fa6";
 import { MdDelete } from "react-icons/md";
 import axios from 'axios';
 import { Accordion, AccordionBody, AccordionHeader, AccordionList } from '@tremor/react';
