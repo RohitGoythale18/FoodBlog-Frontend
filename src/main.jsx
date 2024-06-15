@@ -15,8 +15,8 @@ import AdminLayout from './Admin/AdminLayout/AdminLayout';
 import Dashboard from './Admin/Dashboard/Dashboard';
 import ManageSweets from './Admin/ManageSweets/ManageSweets';
 import ManageSpices from './Admin/ManageSpices/ManageSpices';
-import ManageSoups from './Admin/ManageSoups/ManageSoups'
-import Feedback from './Admin/FeedBack/Feedback';
+import ManageSoups from './Admin/ManageSoups/ManageSoups';
+import Feedback from './Admin/Feedback/Feedback';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
