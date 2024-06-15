@@ -17,35 +17,35 @@ export default function Sidebar() {
                     <NavLink
                         to="/dashboard"
                         className="text-2xl p-3 ml-3 tab-name text-gray-700 hover:text-blue-500"
-                        activeClassName="tab-name text-blue-500"
+                        activeclassname="tab-name text-blue-500"
                     >
                         Dashboard
                     </NavLink>
                     <NavLink
                         to="/dashboard/manage-sweets"
                         className="text-2xl p-3 ml-3 tab-name text-gray-700 hover:text-blue-500"
-                        activeClassName="tab-name text-blue-500"
+                        activeclassname="tab-name text-blue-500"
                     >
                         Sweets
                     </NavLink>
                     <NavLink
                         to="/dashboard/manage-spices"
                         className="text-2xl p-3 ml-3 tab-name text-gray-700 hover:text-blue-500"
-                        activeClassName="tab-name text-blue-500"
+                        activeclassname="tab-name text-blue-500"
                     >
                         Spices
                     </NavLink>
                     <NavLink
                         to="/dashboard/manage-soups"
                         className="text-2xl p-3 ml-3 tab-name text-gray-700 hover:text-blue-500"
-                        activeClassName="tab-name text-blue-500"
+                        activeclassname="tab-name text-blue-500"
                     >
                         Soups
                     </NavLink>
                     <NavLink
                         to="/dashboard/manage-feedback"
                         className="text-2xl p-3 ml-3 tab-name text-gray-700 hover:text-blue-500"
-                        activeClassName="tab-name text-blue-500"
+                        activeclassname="tab-name text-blue-500"
                     >
                         Feedback
                     </NavLink>
