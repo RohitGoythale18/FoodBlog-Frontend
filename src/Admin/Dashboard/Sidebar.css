@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sidebar-conatiner{
+    width: 20%;
+    background: black;
+    opacity: 0.9;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-portal-logo-and-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 5px 5px 5px;
+}
+
+#admin-logo{
+    width: 75px;
+    height: 75px;
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+#admin-portal-name{
+    width: 200px;
+    height: 50px;
+}
+
+#admin-portal-name-svg-text {
+    font-size: 2rem;
+    font-weight: 600;
+    fill: #fff;
+}
+
+.admin-sidebar-tabs{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    font-weight: 600;
+}
+
+.admin-tab-name{
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px 10px 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.admin-tab-name:hover{
+    border-radius: 10px;
+    cursor: pointer;
+    color: black;
+    background-color: rgb(224, 222, 222);
+}
+
+.logout-btn-div{
+    margin: 10px 0px;
+    text-align: center;
+}
+
+#logout-btn{
+    width: 40%;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 10px;
+    background: none;
+}

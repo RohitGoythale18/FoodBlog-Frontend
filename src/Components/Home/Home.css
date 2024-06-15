@@ -1,0 +1,47 @@
+.home-container {
+    margin: 0px;
+    padding: 0px;
+}
+
+.home-portal-title-div {
+    background: url("./home-img.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.home-logo-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+#home-bg-img {
+    height: 250px;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 150px;
+    margin: 5px 25px 5px 5px;
+}
+
+#home-portal-title {
+    color: #fff;
+    font-size: 4.5rem;
+    margin: 5px 5px 5px 25px;
+}
+
+.portal-info-div {
+    /* border: 2px solid white; */
+    width: 80%;
+    margin: 0px auto;
+}
+
+.portal-info {
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: center !important;
+    padding: 20px;
+}

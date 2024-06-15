@@ -1,0 +1,90 @@
+.login-container {
+  /* border: 2px solid red; */
+  margin: 50px 0px;
+  padding: 50px;
+}
+
+.admin-login {
+  width: 60vw;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+#admin-logo{
+  height: 150px;
+  width: 150px;
+  margin: 10px auto;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+input {
+  width: 50%;
+  padding: 15px;
+  margin: 0px auto;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px;
+  font-size: 0.9em;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  width: 50%;
+  padding: 10px 20px;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.or-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0px;
+  font-size: 1.2rem;
+}
+
+.or-div hr{
+  width: 20%;
+  height: 1px;
+  margin: 10px 10px;
+}
+
+.reset-pass-div{
+  margin: 5px;
+}
+
+.reset-pass-link{
+  font-size: 1.2rem;
+  color: #007bff;
+  text-decoration: none;
+}
+.reset-pass-link:hover{
+  color: #0056b3;
+}
