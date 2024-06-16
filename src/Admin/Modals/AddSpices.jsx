@@ -11,7 +11,7 @@ export default function AddSpices({ setAddModal }) {
         e.preventDefault();
         const newSpices = { recipeName, recipeIngredients, recipeSteps };
 
-        axios.post('http://localhost:3000/add-spices', newSpices, {
+        axios.post('https://foodblog-backend.onrender.com/add-spices', newSpices, {
             headers: {
                 'Content-Type': 'application/json'
             }

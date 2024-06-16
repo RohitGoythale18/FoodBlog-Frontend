@@ -13,7 +13,7 @@ export default function ManageSpices() {
   const [currentRecipe, setCurrentRecipe] = useState(null);
 
   const fetchData = async () => {
-    axios.get('http://localhost:3000/get-spices')
+    axios.get('https://foodblog-backend.onrender.com/get-spices')
       .then(res => {
         const result = res.data
         setData(result.spices)
@@ -30,7 +30,7 @@ export default function ManageSpices() {
   const deleteSpice = async (spiceId) => {
     try {
       console.log(`Deleting spice with id: ${spiceId}`);
-      await axios.delete(`http://localhost:3000/delete-spices/${spiceId}`);
+      await axios.delete(`https://foodblog-backend.onrender.com/delete-spices/${spiceId}`);
       fetchData();
     } catch (err) {
       console.error(err);

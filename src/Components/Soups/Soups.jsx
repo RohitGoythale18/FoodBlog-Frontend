@@ -12,7 +12,7 @@ export default function Soups() {
   const [openSoupModal, setOpenSoupModal] = useState(false);
 
   const fetchData = async () => {
-    axios.get('http://localhost:3000/get-soups')
+    axios.get('https://foodblog-backend.onrender.com/get-soups')
       .then(res => {
         const result = res.data
         setData(result.soups)
@@ -41,7 +41,7 @@ export default function Soups() {
       [index]: newLikedStatus
     }));
     try {
-      await axios.post('http://localhost:3000/update-like', { id, liked: newLikedStatus });
+      await axios.post('https://foodblog-backend.onrender.com/update-like', { id, liked: newLikedStatus });
     } catch (err) {
       console.error(err);
     }

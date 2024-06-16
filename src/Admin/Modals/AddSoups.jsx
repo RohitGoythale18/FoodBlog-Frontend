@@ -11,7 +11,7 @@ export default function AddSoups({ setAddModal }) {
         e.preventDefault();
         const newSoups = { recipeName, recipeIngredients, recipeSteps };
 
-        axios.post('http://localhost:3000/add-soups', newSoups, {
+        axios.post('https://foodblog-backend.onrender.com/add-soups', newSoups, {
             headers: {
                 'Content-Type': 'application/json'
             }

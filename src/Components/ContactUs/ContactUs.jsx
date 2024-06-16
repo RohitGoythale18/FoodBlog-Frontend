@@ -10,7 +10,7 @@ export default function ContactUs() {
     const sendFeedback = (e) => {
         e.preventDefault();
         const newFeedback = { clientName, clientEmail, clientMessage };
-        axios.post('http://localhost:3000/add-feedback', newFeedback, {
+        axios.post('https://foodblog-backend.onrender.com/add-feedback', newFeedback, {
             headers: {
                 'Content-Type': 'application/json'
             }

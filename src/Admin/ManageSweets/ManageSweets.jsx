@@ -14,7 +14,7 @@ export default function ManageSweets() {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/get-sweets');
+      const res = await axios.get('https://foodblog-backend.onrender.com/get-sweets');
       setData(res.data.sweets);
     } catch (err) {
       console.error(err);
@@ -28,7 +28,7 @@ export default function ManageSweets() {
   const deleteSweet = async (sweetId) => {
     try {
       console.log(`Deleting sweet with id: ${sweetId}`);
-      await axios.delete(`http://localhost:3000/delete-sweets/${sweetId}`);
+      await axios.delete(`https://foodblog-backend.onrender.com/delete-sweets/${sweetId}`);
       fetchData();
     } catch (err) {
       console.error(err);

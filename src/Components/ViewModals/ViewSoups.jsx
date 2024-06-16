@@ -11,7 +11,7 @@ export default function ViewSoups({ setOpenSoupModal, soupId }) {
 
     const fetchSoupData = async () => {
         try {
-            const res = await axios.get(`http://localhost:3000/get-soups/${soupId}`);
+            const res = await axios.get(`https://foodblog-backend.onrender.com/get-soups/${soupId}`);
             console.log(res.data)
             const result = res.data;
             setSoups({

@@ -11,7 +11,7 @@ export default function ViewSweets({ setOpenSweetModal, sweetId }) {
 
     const fetchSweetData = async () => {
         try {
-            const res = await axios.get(`http://localhost:3000/get-sweets/${sweetId}`);
+            const res = await axios.get(`https://foodblog-backend.onrender.com/get-sweets/${sweetId}`);
             const result = res.data;
             setSweets({
                 recipeName: result.recipeName,

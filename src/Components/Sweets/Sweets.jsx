@@ -13,7 +13,7 @@ export default function Sweets() {
   
   const fetchData = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/get-sweets');
+      const res = await axios.get('https://foodblog-backend.onrender.com/get-sweets');
       const result = res.data;
       setData(result.sweets);
     } catch (err) {
@@ -40,7 +40,7 @@ export default function Sweets() {
       [index]: newLikedStatus
     }));
     try {
-      await axios.post('http://localhost:3000/update-like', { id, liked: newLikedStatus });
+      await axios.post('https://foodblog-backend.onrender.com/update-like', { id, liked: newLikedStatus });
     } catch (err) {
       console.error(err);
     }

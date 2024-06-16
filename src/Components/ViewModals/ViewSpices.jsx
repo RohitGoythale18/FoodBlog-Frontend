@@ -11,7 +11,7 @@ export default function ViewSpices({ setOpenSpiceModal, spiceId }) {
 
     const fetchSpiceData = async () => {
         try {
-            const res = await axios.get(`http://localhost:3000/get-spices/${spiceId}`);
+            const res = await axios.get(`https://foodblog-backend.onrender.com/get-spices/${spiceId}`);
             console.log(res.data)
             const result = res.data;
             setSpices({

@@ -11,7 +11,7 @@ export default function AddSweets({ setAddModal }) {
         e.preventDefault();
         const newSweets = { recipeName, recipeIngredients, recipeSteps };
 
-        axios.post('http://localhost:3000/add-sweets', newSweets, {
+        axios.post('https://foodblog-backend.onrender.com/add-sweets', newSweets, {
             headers: {
                 'Content-Type': 'application/json'
             }

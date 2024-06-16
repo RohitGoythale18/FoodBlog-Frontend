@@ -7,7 +7,7 @@ export default function Feedback() {
     const [data, setData] = useState([]);
 
     const fetchData = async () => {
-        axios.get('http://localhost:3000/get-feedback')
+        axios.get('https://foodblog-backend.onrender.com/get-feedback')
             .then(res => {
                 const result = res.data
                 console.log(result)
@@ -21,7 +21,7 @@ export default function Feedback() {
     const deleteFeedback = async (feedbackId) => {
         try {
           console.log(`Deleting feedback with id: ${feedbackId}`);
-          await axios.delete(`http://localhost:3000/delete-feedback/${feedbackId}`);
+          await axios.delete(`https://foodblog-backend.onrender.com/delete-feedback/${feedbackId}`);
           fetchData();
         } catch (err) {
           console.error(err);

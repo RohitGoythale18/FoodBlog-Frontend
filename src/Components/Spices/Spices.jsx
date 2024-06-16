@@ -12,7 +12,7 @@ export default function Spices() {
   const [openSpiceModal, setOpenSpiceModal] = useState(false);
 
   const fetchData = async () => {
-    axios.get('http://localhost:3000/get-spices')
+    axios.get('https://foodblog-backend.onrender.com/get-spices')
       .then(res => {
         const result = res.data
         setData(result.spices)
@@ -41,7 +41,7 @@ export default function Spices() {
       [index]: newLikedStatus
     }));
     try {
-      await axios.post('http://localhost:3000/update-like', { id, liked: newLikedStatus });
+      await axios.post('https://foodblog-backend.onrender.com/update-like', { id, liked: newLikedStatus });
     } catch (err) {
       console.error(err);
     }

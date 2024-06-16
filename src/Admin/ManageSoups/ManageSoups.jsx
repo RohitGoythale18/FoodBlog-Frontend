@@ -13,7 +13,7 @@ export default function ManageSoups() {
   const [currentRecipe, setCurrentRecipe] = useState(null);
 
   const fetchData = async () => {
-    axios.get('http://localhost:3000/get-soups')
+    axios.get('https://foodblog-backend.onrender.com/get-soups')
       .then(res => {
         const result = res.data
         setData(result.soups)
@@ -30,7 +30,7 @@ export default function ManageSoups() {
   const deleteSoup = async (soupId) => {
     try {
       console.log(`Deleting soup with id: ${soupId}`);
-      await axios.delete(`http://localhost:3000/delete-soups/${soupId}`);
+      await axios.delete(`https://foodblog-backend.onrender.com/delete-soups/${soupId}`);
       fetchData();
     } catch (err) {
       console.error(err);
