@@ -28,37 +28,37 @@ export default function AddSpices({ setAddModal }) {
     return (
         <section className='relative'>
             <IoClose
-                className='cursor-pointer text-2xl hover:text-red-700 transition duration-300 ease-in-out absolute top-2 right-2'
+                className='cursor-pointer text-2xl hover:text-red-700 transition duration-300 ease-in-out absolute top-0 right-2'
                 onClick={() => setAddModal(false)} />
-            <h2 className='text-center m-5'>Add a Spice</h2>
-            <form>
+            <h2 className='text-center m-3'>Add a Spice</h2>
+            <form onSubmit={addSpices}>
                 <div className="flex flex-col text-center w-[70%] mx-auto">
                     <input
                         type="text"
                         value={recipeName}
                         onChange={(e) => setRecipeName(e.target.value)}
-                        className='w-[100%] my-2 p-3 border-2 rounded-lg bg-gray-100'
+                        className='w-[100%] my-1 p-3 border-2 rounded-lg bg-gray-100'
                         id='recipe-name-input'
                         placeholder='Enter recipe name...' />
 
                     <textarea
                         value={recipeIngredients}
                         onChange={(e) => setRecipeIngredients(e.target.value)}
-                        className='w-[100%] my-2 p-3 border-2 rounded-lg bg-gray-100 h-28 resize-none'
+                        className='w-[100%] my-1 p-3 border-2 rounded-lg bg-gray-100 h-28 resize-none'
                         id='recipe-ingredients-input'
                         placeholder='Enter ingredients...' />
 
                     <textarea
                         value={recipeSteps}
                         onChange={(e) => setRecipeSteps(e.target.value)}
-                        className='w-[100%] my-2 p-3 border-2 rounded-lg bg-gray-100 h-[200px] resize-none'
+                        className='w-[100%] my-1 p-3 border-2 rounded-lg bg-gray-100 h-[200px] resize-none'
                         id='recipe-cooking-steps-input'
                         placeholder='Enter cooking steps...' />
                 </div>
                 <button
-                    onClick={addSpices}
                     type='submit'
-                    id='add-recipe-button'>
+                    className='w-[150px] my-1 p-2 font-semibold bg-blue-500 text-white rounded-lg'
+                >
                     Add
                 </button>
             </form>
