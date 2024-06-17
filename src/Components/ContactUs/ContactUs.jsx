@@ -16,9 +16,10 @@ export default function ContactUs() {
             }
         })
             .then(res => {
-                console.log('Feedback added successfully');
+                window.alert('Feedback added successfully...!');
             })
             .catch(err => {
+                window.alert('Fail to send feedback...!');
                 console.log(err);
             });
     }
@@ -56,7 +57,7 @@ export default function ContactUs() {
                     <button
                         type='submit'
                         id='send-feedback'>
-                        Submit
+                        Send
                     </button>
                 </form>
             </section>
