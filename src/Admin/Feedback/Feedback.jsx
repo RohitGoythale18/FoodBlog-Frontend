@@ -29,7 +29,7 @@ export default function Feedback() {
       };
     
       const handleDelete = (feedbackId) => {
-        const confirmed = window.confirm(`Are you sure you want to delete ${clientName}'s feedback?`);
+        const confirmed = window.confirm(`Are you sure you want to delete feedback?`);
         if (confirmed) {
           deleteFeedback(feedbackId);
         }
