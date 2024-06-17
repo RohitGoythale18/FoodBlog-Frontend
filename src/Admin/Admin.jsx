@@ -18,7 +18,7 @@ export default function Admin() {
 
     const handleLogin = (data) => {
         const { username, password } = data;
-        if (username === 'admin' && password === 'admin123') {
+        if (username === 'Foodmania' && password === 'Foodmania@123') {
             alert('Login successful!');
             setLoggedIn(true);
             navigate('/dashboard');
