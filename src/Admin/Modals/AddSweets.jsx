@@ -32,7 +32,7 @@ export default function AddSweets({ setAddModal }) {
     };
 
     return (
-        <section className='relative border-2 border-red-500 bg-white'>
+        <section className='relative bg-white'>
             <IoClose
                 className='cursor-pointer text-2xl hover:text-red-700 transition duration-300 ease-in-out absolute top-0 right-2'
                 onClick={() => setAddModal(false)}
