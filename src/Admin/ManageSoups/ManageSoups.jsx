@@ -68,9 +68,13 @@ export default function ManageSoups() {
             data.map((soup, index) => (
               <Accordion key={index}>
                 <AccordionHeader className="text-lg font-semibold text-tremor-content-strong dark:text-dark-tremor-content-strong w-full">
-                  <div className='flex justify-between items-center w-[100%]'>
-                    {index + 1}
-                    {soup.recipeName}
+                  <div className='flex justify-between items-center'>
+                    <div>
+                      {index + 1}
+                    </div>
+                    <div>
+                      {soup.recipeName}
+                    </div>
                     <div className='flex space-x-4'>
                       <FaPen onClick={() => handleUpdateModal(soup)} />
                       <MdDelete onClick={() => handleDelete(soup._id)} />
