@@ -67,7 +67,7 @@ export default function ManageSweets() {
             data.map((sweet, index) => (
               <Accordion key={index}>
                 <AccordionHeader className="text-lg font-semibold text-tremor-content-strong dark:text-dark-tremor-content-strong w-auto">
-                  <div className='flex justify-between items-center w-[55vw]'>
+                  <div className='flex justify-between items-center w-auto'>
                     <div>
                       {index + 1}
                     </div>
