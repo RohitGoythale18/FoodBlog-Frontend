@@ -58,7 +58,7 @@ export default function ManageSoups() {
       <section className="h-[100vh] text-center m-5">
         <h2 className=''>Soups Recipes</h2>
         <button
-          className='flex items-center justify-center  font-semibold w-[160px] p-2 pt-1 space-x-2'
+          className='flex items-center justify-center font-semibold w-[160px] p-2 pt-1 space-x-2'
           onClick={openModal}>
           <FaPlusCircle className='mt-1' />
           <span className='pt-1 font-semibold text-lg'>Add Soup</span>
@@ -68,7 +68,7 @@ export default function ManageSoups() {
             data.map((soup, index) => (
               <Accordion key={index}>
                 <AccordionHeader className="text-lg font-semibold text-tremor-content-strong dark:text-dark-tremor-content-strong w-full">
-                  <div className='flex justify-between items-center w-full'>
+                  <div className='flex justify-between items-center w-[100%]'>
                     <div>
                       {index + 1}
                     </div>
