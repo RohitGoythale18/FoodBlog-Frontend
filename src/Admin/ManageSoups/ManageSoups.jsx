@@ -68,7 +68,7 @@ export default function ManageSoups() {
             data.map((soup, index) => (
               <Accordion key={index}>
                 <AccordionHeader className="text-lg font-semibold text-tremor-content-strong dark:text-dark-tremor-content-strong w-full">
-                  <div className='flex justify-between items-center'>
+                  <div className='w-[100%] flex justify-between items-center'>
                     <div>
                       {index + 1}
                     </div>
