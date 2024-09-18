@@ -7,6 +7,7 @@ export default function ViewSpices({ setOpenSpiceModal, spiceId }) {
         recipeName: '',
         recipeIngredients: '',
         recipeSteps: '',
+        recipeImage: '',
     });
 
     const fetchSpiceData = async () => {
@@ -17,7 +18,8 @@ export default function ViewSpices({ setOpenSpiceModal, spiceId }) {
             setSpices({
                 recipeName: result.recipeName,
                 recipeIngredients: result.recipeIngredients,
-                recipeSteps: result.recipeSteps
+                recipeSteps: result.recipeSteps,
+                recipeImage: result.recipeImage,
             });
         } catch (err) {
             console.error(err);
@@ -58,7 +60,7 @@ export default function ViewSpices({ setOpenSpiceModal, spiceId }) {
                     <div className='border-2 w-[35%] mx-2 p-2 flex items-center justify-center'>
                         <img
                             className='border-2 border-black w-[100%] h-[80%] max-h-64 rounded-full'
-                            // src={spices.imageUrl}
+                            src={spices.recipeImage}
                             alt="sweet image" />
                     </div>
                 </div>

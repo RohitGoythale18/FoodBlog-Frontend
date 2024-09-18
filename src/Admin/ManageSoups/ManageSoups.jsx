@@ -67,7 +67,7 @@ export default function ManageSoups() {
           {data && data.length > 0 ? (
             data.map((soup, index) => (
               <Accordion key={index}>
-                <AccordionHeader className="text-lg font-semibold text-tremor-content-strong dark:text-dark-tremor-content-strong w-[70%]">
+                <AccordionHeader className="text-lg font-semibold text-tremor-content-strong dark:text-dark-tremor-content-strong w-auto">
                   <div className='flex justify-between items-center w-[54vw]'>
                     <div>
                       {index + 1}
@@ -86,6 +86,12 @@ export default function ManageSoups() {
                 </AccordionBody>
                 <AccordionBody className="leading-6 border-2 mx-auto mb-2 bg-gray-200 rounded-lg text-justify w-[70%]">
                   {soup.recipeSteps}
+                </AccordionBody>
+                <AccordionBody className="leading-6 border-2 mx-auto mb-2 bg-gray-200 rounded-lg text-justify w-[70%]">
+                  <img
+                    src={soup.recipeImage}
+                    alt={soup.recipeName}
+                    className="text-xl font-semibold text-tremor-default text-tremor-content dark:text-dark-tremor-content h-[120px] w-[120px] border-2 border-black rounded-full" />
                 </AccordionBody>
               </Accordion>
             ))

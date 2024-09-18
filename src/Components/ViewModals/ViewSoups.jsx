@@ -7,6 +7,7 @@ export default function ViewSoups({ setOpenSoupModal, soupId }) {
         recipeName: '',
         recipeIngredients: '',
         recipeSteps: '',
+        recipeImage: '',
     });
 
     const fetchSoupData = async () => {
@@ -17,7 +18,8 @@ export default function ViewSoups({ setOpenSoupModal, soupId }) {
             setSoups({
                 recipeName: result.recipeName,
                 recipeIngredients: result.recipeIngredients,
-                recipeSteps: result.recipeSteps
+                recipeSteps: result.recipeSteps,
+                recipeImage: result.recipeImage,
             });
         } catch (err) {
             console.error(err);
@@ -58,7 +60,7 @@ export default function ViewSoups({ setOpenSoupModal, soupId }) {
                     <div className='border-2 w-[35%] mx-2 p-2 flex items-center justify-center'>
                         <img
                             className='border-2 border-black w-[100%] h-[80%] max-h-64 rounded-full'
-                            // src={soups.imageUrl}
+                            src={soups.recipeImage}
                             alt="sweet image" />
                     </div>
                 </div>

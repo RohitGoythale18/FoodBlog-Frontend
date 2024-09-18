@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import { IoClose } from 'react-icons/io5';
 
@@ -6,22 +6,28 @@ export default function AddSoups({ setAddModal }) {
     const [recipeName, setRecipeName] = useState('');
     const [recipeIngredients, setRecipeIngredients] = useState('');
     const [recipeSteps, setRecipeSteps] = useState('');
+    const [recipeImage, setRecipeImage] = useState('');
 
     const addSoups = (e) => {
         e.preventDefault();
-        const newSoups = { recipeName, recipeIngredients, recipeSteps };
+        
+        const formData = new FormData();
+        formData.append('recipeName', recipeName);
+        formData.append('recipeIngredients', recipeIngredients);
+        formData.append('recipeSteps', recipeSteps);
+        formData.append('recipeImage', recipeImage);
 
-        axios.post('https://foodblog-backend.onrender.com/add-soups', newSoups, {
+        axios.post('https://foodblog-backend.onrender.com/add-soups', formData, {
             headers: {
-                'Content-Type': 'application/json'
-            }
+                'Content-Type': 'multipart/form-data',
+            },
         })
             .then(res => {
-                console.log('Recipe added successfully');
+                console.log('Recipe added successfully:', res.data);
                 setAddModal(false);
             })
             .catch(err => {
-                console.log(err);
+                console.error('Error adding recipe:', err);
             });
     };
 
@@ -54,6 +60,15 @@ export default function AddSoups({ setAddModal }) {
                         className='w-[100%] my-1 p-3 border-2 rounded-lg bg-gray-100 h-[200px] resize-none'
                         id='recipe-cooking-steps-input'
                         placeholder='Enter cooking steps...' />
+
+                    <label className='flex items-center'>
+                        Upload recipe image
+                        <input
+                            type="file"
+                            onChange={(e) => setRecipeImage(e.target.files[0])}
+                            className='w-[50%] my-1 p-3 border-2 rounded-lg bg-gray-100'
+                        />
+                    </label>
                 </div>
                 <button
                     type='submit'

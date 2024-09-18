@@ -11,6 +11,7 @@ export default function ManageSweets() {
   const [addModal, setAddModal] = useState(false);
   const [updateModal, setUpdateModal] = useState(false);
   const [currentRecipe, setCurrentRecipe] = useState(null);
+  // const [selectedRecipeId, setSelectedRecipeId] = useState(null);
 
   const fetchData = async () => {
     try {
@@ -65,7 +66,7 @@ export default function ManageSweets() {
           {data && data.length > 0 ? (
             data.map((sweet, index) => (
               <Accordion key={index}>
-                <AccordionHeader className="text-lg font-semibold text-tremor-content-strong dark:text-dark-tremor-content-strong w-[70%]">
+                <AccordionHeader className="text-lg font-semibold text-tremor-content-strong dark:text-dark-tremor-content-strong w-auto">
                   <div className='flex justify-between items-center w-[55vw]'>
                     <div>
                       {index + 1}
@@ -85,6 +86,12 @@ export default function ManageSweets() {
                 <AccordionBody className="leading-6 border-2 mx-auto mb-2 bg-gray-200 rounded-lg text-justify w-[70%]">
                   {sweet.recipeSteps}
                 </AccordionBody>
+                <AccordionBody className="leading-6 border-2 mx-auto mb-2 bg-gray-200 rounded-lg text-justify w-[70%]">
+                  <img
+                    src={sweet.recipeImage}
+                    alt={sweet.recipeName}
+                    className="text-xl font-semibold text-tremor-default text-tremor-content dark:text-dark-tremor-content h-[120px] w-[120px] border-2 border-black rounded-full" />
+                </AccordionBody>
               </Accordion>
             ))
           ) : (
@@ -101,11 +108,11 @@ export default function ManageSweets() {
           </div>
         )}
 
-        {updateModal && (
+        {updateModal && selectedRecipeId !== null && (
           <div className="fixed inset-0 flex items-center justify-center z-50">
             <div className="absolute inset-0 bg-black opacity-50" onClick={() => setUpdateModal(false)}></div>
             <div className="relative bg-white shadow-lg z-50 w-[100%] max-w-4xl h-[80vh]">
-              <UpdateRecipe setUpdateModal={setUpdateModal} currentRecipe={currentRecipe} fetchData={fetchData} />
+              <UpdateRecipe id={selectedRecipeId} setUpdateModal={setUpdateModal} currentRecipe={currentRecipe} fetchData={fetchData} />
             </div>
           </div>
         )}

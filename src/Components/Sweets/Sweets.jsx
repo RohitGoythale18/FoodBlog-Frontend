@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Card } from '@tremor/react';
 import axios from 'axios';
 import { FaHeart } from "react-icons/fa";
@@ -10,7 +10,7 @@ export default function Sweets() {
   const [liked, setLiked] = useState({});
   const [selectedSweetId, setSelectedSweetId] = useState(null);
   const [openSweetModal, setOpenSweetModal] = useState(false);
-  
+
   const fetchData = async () => {
     try {
       const res = await axios.get('https://foodblog-backend.onrender.com/get-sweets');
@@ -24,15 +24,15 @@ export default function Sweets() {
   useEffect(() => {
     fetchData();
   }, []);
-  
+
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
   };
-  
+
   const filteredSweets = Data.filter(sweets =>
     sweets.recipeName.toLowerCase().includes(searchTerm.toLowerCase())
   );
-  
+
   const handleLike = async (id, index) => {
     const newLikedStatus = !liked[index];
     setLiked(prev => ({
@@ -45,7 +45,7 @@ export default function Sweets() {
       console.error(err);
     }
   };
-  
+
   const handleOpenSweetModal = (id) => {
     setSelectedSweetId(id);
     setOpenSweetModal(true);
@@ -83,7 +83,10 @@ export default function Sweets() {
                 />
               </div>
               <div className="flex justify-center">
-                <p className="text-center text-xl font-semibold text-tremor-default text-tremor-content dark:text-dark-tremor-content h-[120px] w-[120px] mx-auto border-2 border-black rounded-full"></p>
+                <img
+                  src={sweets.recipeImage}
+                  alt={sweets.recipeName}
+                  className="text-center text-xl font-semibold text-tremor-default text-tremor-content dark:text-dark-tremor-content h-[120px] w-[120px] mx-auto border-2 border-black rounded-full" />
               </div>
               <p className="text-center text-xl font-semibold text-tremor-default text-tremor-content dark:text-dark-tremor-content">{sweets.recipeName}</p>
             </Card>

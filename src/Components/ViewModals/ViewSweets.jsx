@@ -7,6 +7,7 @@ export default function ViewSweets({ setOpenSweetModal, sweetId }) {
         recipeName: '',
         recipeIngredients: '',
         recipeSteps: '',
+        recipeImage: '',
     });
 
     const fetchSweetData = async () => {
@@ -16,7 +17,8 @@ export default function ViewSweets({ setOpenSweetModal, sweetId }) {
             setSweets({
                 recipeName: result.recipeName,
                 recipeIngredients: result.recipeIngredients,
-                recipeSteps: result.recipeSteps
+                recipeSteps: result.recipeSteps,
+                recipeImage: result.recipeImage,
             });
             
         } catch (err) {
@@ -56,8 +58,8 @@ export default function ViewSweets({ setOpenSweetModal, sweetId }) {
                 <div className='border-2 w-[35%] mx-2 p-2 flex items-center justify-center'>
                     <img
                         className='border-2 border-black w-[100%] h-[80%] max-h-64 rounded-full'
-                        // src={sweets.imageUrl}
-                        alt="sweet image" />
+                        src={sweets.recipeImage}
+                        alt={sweets.recipeName} />
                 </div>
             </div>
         </div>
